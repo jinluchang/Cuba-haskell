@@ -11,7 +11,7 @@ myIntegrand xs d | length xs /= 3 = undefined
 
 main :: IO()
 main = do
-    let results = vegas 3 6 myIntegrand (1) 0.001 0
+    let results = vegas 3 6 myIntegrand (1) 0.01 0
     print results
 
 
