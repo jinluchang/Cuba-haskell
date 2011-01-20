@@ -1,11 +1,10 @@
 {-# LANGUAGE ForeignFunctionInterface #-}
 
-module Cuba where
+module Math.Cuba where
 
-import GHC.Ptr
 import Foreign
 import Foreign.C.Types
-import Monad
+import Control.Monad
 
 seed :: Int
 seed = 0

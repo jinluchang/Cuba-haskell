@@ -1,6 +1,6 @@
 module Main where
 
-import Cuba
+import Math.Cuba
 
 myIntegrand :: Integrand
 myIntegrand xs d | length xs /= 3 = undefined

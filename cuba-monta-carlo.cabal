@@ -1,0 +1,48 @@
+name: cuba-monta-carlo
+version: 0.0.1
+license: GPL-3
+license-file: COPYING
+copyright: (c) Frank Waterret
+author: Frank Waterret
+maintainer: Frank Waterret <waterret@gmail.com>
+bug-reports: mailto:waterret@gmail.com
+stability: unstable
+homepage: http://code.google.com/p/cuba-haskell/
+synopsis: A haskell binding of Cuba Monta Carlo library.
+category: Math
+cabal-version: >= 1.6
+build-type: Simple
+
+Description:
+  This is a Haskell binding for Cuba Monta Carlo library. This binding
+  currently only provide limited access to Vegas algorithm in Cuba
+  library. The Cuba library should already be installed in order to
+  install this binding. Please note that the website of the program is
+  still not working as expected. If you have some problems, contact the
+  author directly through email instead.
+
+source-repository head
+  type:     svn
+  location: http://cuba-haskell.googlecode.com/svn/trunk/
+
+flag threaded
+  default: False
+
+executable cuba-test
+  hs-source-dirs: src
+  main-is: Main.hs
+  extra-libraries: cuba
+  build-depends: base >= 4.2 && < 5
+  ghc-options: -Wall
+  if flag(threaded)
+     ghc-options: -threaded
+
+library
+  exposed-modules: Math.Cuba
+  hs-source-dirs: src
+  extra-libraries: cuba
+  build-depends: base >= 4.2 && < 5
+  ghc-options: -Wall
+  if flag(threaded)
+     ghc-options: -threaded
+
