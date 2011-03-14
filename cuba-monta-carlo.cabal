@@ -33,7 +33,7 @@ executable cuba-test
   main-is: Main.hs
   extra-libraries: cuba
   build-depends: base >= 4.2 && < 5
-  ghc-options: -Wall
+  ghc-options: -Wall -O2
   if flag(threaded)
      ghc-options: -threaded
 
@@ -42,7 +42,7 @@ library
   hs-source-dirs: src
   extra-libraries: cuba
   build-depends: base >= 4.2 && < 5
-  ghc-options: -Wall
+  ghc-options: -Wall -O2
   if flag(threaded)
      ghc-options: -threaded
 
